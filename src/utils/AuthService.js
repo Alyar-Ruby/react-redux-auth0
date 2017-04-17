@@ -9,7 +9,7 @@ import socialIconMicrosoft from '../images/microsoft_logo.svg'
 export default class AuthService {
   options = {
     auth: {
-      redirectUrl: 'http://localhost:3000/callback',
+      redirectUrl: 'http://localhost:3000/dashboard',
       responseType: 'token'
     },
     avatar: {

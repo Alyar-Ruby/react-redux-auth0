@@ -68,7 +68,7 @@ export default class AuthService {
 
     var options2 = this.options
     options2.auth = {
-      redirectUrl: server + 'index.html',
+      redirectUrl: server + 'dashboard/',
       responseType: 'token'
     }
     console.log(options2)

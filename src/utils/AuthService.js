@@ -8,10 +8,6 @@ import socialIconMicrosoft from '../images/microsoft_logo.svg'
 
 export default class AuthService {
   options = {
-    auth: {
-      redirectUrl: 'http://localhost:3000/dashboard',
-      responseType: 'token'
-    },
     avatar: {
       url: function(email, cb) {
         // Obtain the avatar url for the email input by the user, Lock
@@ -67,9 +63,18 @@ export default class AuthService {
     ]
   }
 
-  constructor(clientId, domain) {
+  constructor(clientId, domain, server) {
+    console.log(server)
+
+    var options2 = this.options
+    options2.auth = {
+      redirectUrl: server + 'index.html',
+      responseType: 'token'
+    }
+    console.log(options2)
+
     // Configure Auth0 lock
-    this.lock = new Auth0Lock(clientId, domain, this.options)
+    this.lock = new Auth0Lock(clientId, domain, options2)
     // binds login functions to keep this context
     this.login = this.login.bind(this)
   }

@@ -60,7 +60,7 @@ module.exports = {
       {
         //IMAGE LOADER
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loader:'url'
+        loader:'file-loader'
       },
       // "postcss" loader applies autoprefixer to our CSS.
       // "css" loader resolves paths in CSS and adds assets as dependencies.

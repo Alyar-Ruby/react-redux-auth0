@@ -5,6 +5,7 @@ import phoneNumberIcon from '../images/phonenumber.svg'
 import socialIconGoogle from '../images/google_g_logo.svg'
 import socialIconLinkedin from '../images/linkedin-logo-blue.svg'
 import socialIconMicrosoft from '../images/microsoft_logo.svg'
+import defaultAvatar from '../images/defaultuser.png'
 
 export default class AuthService {
   options = {
@@ -35,15 +36,6 @@ export default class AuthService {
     showIcon: false,
     socialButtonStyle: 'small',
     theme: {
-      logo: 'http://cdn.onlinewebfonts.com/svg/download_518099.png',
-      authButtons: {
-        'google': {
-          displayName: 'Test Conn', 
-          primaryColor: '#b7b7b7', 
-          foregroundColor: '#000000', 
-          icon: 'http://example.com/icon.png'
-        },
-      },
       labeledSubmitButton: false,
       primaryColor: '#fa8e2e',
     },
@@ -51,7 +43,7 @@ export default class AuthService {
       {
         name: 'phone',
         placeholder: 'Phone',
-        type: 'number',
+        type: 'text',
         icon: phoneNumberIcon,
         validator: function(phonenumber) {
           return {
@@ -68,9 +60,10 @@ export default class AuthService {
 
     var options2 = this.options
     options2.auth = {
-      redirectUrl: server + 'dashboard/',
+      redirectUrl: server + 'dashboard',
       responseType: 'token'
     }
+    options2.theme.logo = defaultAvatar
     console.log(options2)
 
     // Configure Auth0 lock
@@ -83,8 +76,6 @@ export default class AuthService {
   changeTheme() {
     if (this.themeChanged == false)
     {
-      console.log(socialIconMicrosoft)
-
       var customStyle = ''
       customStyle += '.auth0-lock-header-bg-blur { background-image: none!important } .auth0-lock-header-bg { background: white!important; } .auth0-lock-header-bg-solid { background-color: white!important } '
       customStyle += '.auth0-lock-social-button { margin: 0px 20px!important; } '

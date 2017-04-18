@@ -1,5 +1,7 @@
 import React from 'react'
 import { HeaderContainer } from '../../containers'
+import { ReflexContainer/*, ReflexElement*/ } from 'react-reflex'
+import { PropTypes } from 'prop-types'
 
 class App extends React.Component {
   constructor(props) {
@@ -9,17 +11,17 @@ class App extends React.Component {
 
   render() {
     return(
-      <div>
+      <ReflexContainer>
         <HeaderContainer />
         {this.props.children}
-      </div>
+      </ReflexContainer>
     )
   }
 }
 
 App.propTypes = {
-  children: React.PropTypes.element.isRequired,
-  checkLogin: React.PropTypes.func.isRequired
+  children: PropTypes.element.isRequired,
+  checkLogin: PropTypes.func.isRequired
 }
 
 export default App

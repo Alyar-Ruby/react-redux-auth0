@@ -2,10 +2,8 @@ import Auth0Lock from 'auth0-lock'
 // import Auth0LockPasswordless from 'auth0-lock-passwordless'
 import jwtDecode from 'jwt-decode'
 import phoneNumberIcon from '../images/phonenumber.svg'
-import socialIconGoogle from '../images/google_g_logo.svg'
-import socialIconLinkedin from '../images/linkedin-logo-blue.svg'
-import socialIconMicrosoft from '../images/microsoft_logo.svg'
 import defaultAvatar from '../images/defaultuser.png'
+import auth0Style from './auth0.css'
 
 export default class AuthService {
   options = {
@@ -76,20 +74,12 @@ export default class AuthService {
   changeTheme() {
     if (this.themeChanged == false)
     {
-      var customStyle = ''
-      customStyle += '.auth0-lock-header-bg-blur { background-image: none!important } .auth0-lock-header-bg { background: white!important; } .auth0-lock-header-bg-solid { background-color: white!important } '
-      customStyle += '.auth0-lock-social-button { margin: 0px 20px!important; } '
-      customStyle += '.auth0-lock-social-button-icon { display: none!important; } '
-      customStyle += '.auth0-lock-social-button[data-provider^=google] { background-color:white!important; background-image: url(' + socialIconGoogle + ')!important; } '
-      customStyle += '.auth0-lock-social-button[data-provider^=linkedin] { background-color:white!important; background-image: url(' + socialIconLinkedin + ')!important; } '
-      customStyle += '.auth0-lock-social-button[data-provider^=windows] { background-color:white!important; background-image: url(' + socialIconMicrosoft + ')!important; } '
-
       var styleId = 'auth0-lock-style'
       var style = document.getElementById(styleId)
       if (style.styleSheet) {
-        style.styleSheet.cssText = customStyle + style.styleSheet.cssText
+        style.styleSheet.cssText = auth0Style + style.styleSheet.cssText
       } else {
-        style.innerHTML = customStyle + style.innerHTML
+        style.innerHTML = auth0Style + style.innerHTML
       }
 
       this.themeChanged = true

@@ -1,0 +1,25 @@
+.auth0-lock-header-bg-blur {
+  background-image: none!important;
+}
+.auth0-lock-header-bg { 
+  background: white!important; 
+}
+.auth0-lock-header-bg-solid {
+  background-color: white!important
+}
+.auth0-lock-social-button {
+  background-color: white!important;
+  margin: 0px 20px!important;
+}
+.auth0-lock-social-button-icon {
+  display: none!important;
+}
+.auth0-lock-social-button[data-provider^=google] {
+  background-image: url('../images/google_g_logo.svg')!important;
+}
+.auth0-lock-social-button[data-provider^=linkedin] {
+  background-image: url('../images/linkedin-logo-blue.svg')!important;
+}
+.auth0-lock-social-button[data-provider^=windows] {
+  background-image: url('../images/microsoft_logo.svg')!important;
+}

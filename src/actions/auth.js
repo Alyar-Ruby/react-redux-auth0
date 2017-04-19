@@ -35,7 +35,7 @@ export function loginRequest() {
 }
 
 export function loginSuccess(profile) {
-  browserHistory.push('/')
+  browserHistory.push('/dashboard/')
   return {
     type: LOGIN_SUCCESS,
     profile

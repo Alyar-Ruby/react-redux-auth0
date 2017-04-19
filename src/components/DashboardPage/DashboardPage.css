@@ -1,9 +1,9 @@
-.dashboard-content {
+.dashboard {
   padding: 0px;
   margin: 0px;
 }
 
-.dashboard-content > div {
+.dashboard > div {
   display: inline-block;
   box-sizing: border-box;
   margin: 0px;
@@ -107,10 +107,19 @@
   box-sizing: border-box;
 }
 
+.dashboard-content {
+  padding: 40px 50px!important;
+}
+
 .welcomeBox {
-  margin: 30px 20px;
   background-color: #ffe6cb;
   padding: 40px 30px;
+}
+
+.welcomeBox .boxIcon {
+  position: absolute;
+  left: 15px;
+  top: 10px;
 }
 
 .dialogButtonGroup {

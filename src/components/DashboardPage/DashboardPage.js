@@ -1,6 +1,7 @@
 import React from 'react'
 import CommandButton from '../CommandButton/CommandButton'
 import './DashboardPage.css'
+import GuideIcon from '../../images/guideicon.png'
 
 class DashboardPage extends React.Component {
   constructor(props) {
@@ -45,12 +46,13 @@ class DashboardPage extends React.Component {
 
   render() {
     return (
-      <div className='dashboard-content'>
+      <div className='dashboard'>
         <div className='grid__col-xs-6 grid__col-sm-4 grid__col-md-3'>
           { this.sidebarContent() }
         </div>
-        <div className='grid__col_xs-6 grid__col-sm-7 grid__col-md-7'>
+        <div className='grid__col_xs-6 grid__col-sm-7 grid__col-md-7 dashboard-content'>
           <div className='welcomeBox'>
+            <img className='boxIcon' src={GuideIcon}></img>
             <h1>Welcome to Cloudtaps</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

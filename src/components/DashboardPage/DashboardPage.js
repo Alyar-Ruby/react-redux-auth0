@@ -60,12 +60,12 @@ class DashboardPage extends React.Component {
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollited.
             </p>
-            <p className='dialogButtonGroup'>
+            <div className='dialogButtonGroup'>
               <div>
                 <CommandButton className='dialogButton' type='cancel'>No Thanks</CommandButton>
                 <CommandButton className='dialogButton'>Show Me</CommandButton>
               </div>
-            </p>
+            </div>
           </div>
         </div>
       </div>

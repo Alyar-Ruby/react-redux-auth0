@@ -114,6 +114,8 @@
 .welcomeBox {
   background-color: #ffe6cb;
   padding: 40px 30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 0px #ebebeb;
 }
 
 .welcomeBox .boxIcon {

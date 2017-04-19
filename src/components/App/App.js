@@ -2,6 +2,7 @@ import React from 'react'
 import { HeaderContainer } from '../../containers'
 import { ReflexContainer/*, ReflexElement*/ } from 'react-reflex'
 import { PropTypes } from 'prop-types'
+import '../../styles/common.css'
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +14,9 @@ class App extends React.Component {
     return(
       <ReflexContainer>
         <HeaderContainer />
-        {this.props.children}
+        <div className='content'>
+          {this.props.children}
+        </div>
       </ReflexContainer>
     )
   }

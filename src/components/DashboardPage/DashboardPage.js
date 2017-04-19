@@ -1,4 +1,5 @@
 import React from 'react'
+import CommandButton from '../CommandButton/CommandButton'
 import './DashboardPage.css'
 
 class DashboardPage extends React.Component {
@@ -31,10 +32,10 @@ class DashboardPage extends React.Component {
               <p>Your AWS inventory 2</p>
               <p>&nbsp;</p>
               <p>Add an AWS account to import your inventory and enable live data</p>
-              <button className='pushButton' type='button'>
+              <CommandButton style={{width: '100%'}}>
                 <p className='plusicon'>+</p>
                 Add AWS Account
-              </button>
+              </CommandButton>
             </div>
           </div>
         </div>
@@ -56,6 +57,12 @@ class DashboardPage extends React.Component {
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollited.
+            </p>
+            <p className='dialogButtonGroup'>
+              <div>
+                <CommandButton className='dialogButton' type='cancel'>No Thanks</CommandButton>
+                <CommandButton className='dialogButton'>Show Me</CommandButton>
+              </div>
             </p>
           </div>
         </div>

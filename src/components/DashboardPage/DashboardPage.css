@@ -96,28 +96,6 @@
   padding: 00px 10px;
 }
 
-.pushButton {
-  border: none;
-  border-radius: 3px;
-  background-color: #fb8f18;
-  color: white;
-  padding: 10px;
-  width: 100%;
-  font-size: 0.9rem;
-  font-weight: bolder;
-  text-transform: uppercase;
-  box-shadow: 0px 0px 2px 0px #ababab;
-  cursor: pointer;
-}
-
-.pushButton:focus {
-  outline: none;
-}
-
-.pushButton:active {
-  filter: brightness(95%)
-}
-
 .plusicon {
   margin: 0px 10px 0px 0px;
   border-radius: 50%;
@@ -133,4 +111,20 @@
   margin: 30px 20px;
   background-color: #ffe6cb;
   padding: 40px 30px;
+}
+
+.dialogButtonGroup {
+  overflow: auto;
+  padding: 1px;
+  margin: 0px;
+}
+
+.dialogButtonGroup > div {
+  float: right;
+}
+
+.dialogButton {
+  width: 132px;
+  margin-top: 10px;
+  margin-left: 10px;
 }

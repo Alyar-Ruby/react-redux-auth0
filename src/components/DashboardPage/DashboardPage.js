@@ -26,6 +26,10 @@ const DashboardPage = () => (
             <p>Your AWS inventory 2</p>
             <p>&nbsp;</p>
             <p>Add an AWS account to import your inventory and enable live data</p>
+            <button className='pushButton' type='button'>
+              <p className='plusicon'>+</p>
+              Add AWS Account
+            </button>
           </div>
         </div>
       </div>

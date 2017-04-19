@@ -58,7 +58,7 @@ export default class AuthService {
 
     var options2 = this.options
     options2.auth = {
-      redirectUrl: server + 'dashboard',
+      redirectUrl: server + 'dashboard/',
       responseType: 'token'
     }
     options2.theme.logo = defaultAvatar

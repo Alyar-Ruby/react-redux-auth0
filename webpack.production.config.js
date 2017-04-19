@@ -32,7 +32,7 @@ module.exports = {
     // Otherwise React will be compiled in the very slow development mode.
     new DotenvPlugin({
       sample: './.env.example',
-      path: './.env'
+      path: './.publish.env'
     }),
     // CSS files from the extract-text-plugin loader
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.

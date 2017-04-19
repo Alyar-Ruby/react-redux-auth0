@@ -1,6 +1,17 @@
+.dashboard-content {
+  padding: 0px;
+  margin: 0px;
+}
+
+.dashboard-content > div {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
 .tabs {
   font-size: 0;
-  width: 225px;
+  width: 100%;
   min-height: 200px;
   margin: 0px 5px;
   display: inline-block;
@@ -116,4 +127,10 @@
   display: inline-block;
   padding: 0px!important;
   box-sizing: border-box;
+}
+
+.welcomeBox {
+  margin: 30px 20px;
+  background-color: #ffe6cb;
+  padding: 40px 30px;
 }

@@ -33,7 +33,7 @@ class DashboardPage extends React.Component {
               <p>Your AWS inventory 2</p>
               <p>&nbsp;</p>
               <p>Add an AWS account to import your inventory and enable live data</p>
-              <CommandButton style={{width: '100%'}}>
+              <CommandButton style={{width: '100%'}} clickHandler={this.onAddAccount}>
                 <p className='plusicon'>+</p>
                 Add AWS Account
               </CommandButton>
@@ -42,6 +42,16 @@ class DashboardPage extends React.Component {
         </div>
       </div>
     )
+  }
+
+  onAddAccount() {
+    alert('Please add AWS Account...')
+  }
+  onNoThanks() {
+    alert('No Thanks')
+  }
+  onShowMe() {
+    alert('Show Me')
   }
 
   render() {
@@ -62,8 +72,8 @@ class DashboardPage extends React.Component {
             </p>
             <div className='dialogButtonGroup'>
               <div>
-                <CommandButton className='dialogButton' type='cancel'>No Thanks</CommandButton>
-                <CommandButton className='dialogButton'>Show Me</CommandButton>
+                <CommandButton className='dialogButton' type='cancel' clickHandler={this.onNoThanks} >No Thanks</CommandButton>
+                <CommandButton className='dialogButton' clickHandler={this.onShowMe} >Show Me</CommandButton>
               </div>
             </div>
           </div>
